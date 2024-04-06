@@ -11,7 +11,7 @@ public class ChessBoard {
 
     final public static Integer boardSize = 8;
 
-    public Map<Cell, Piece> cellPieceMap=new HashMap<>();
+    public Map<Cell, Piece> cellPieceMap = new HashMap<>();
 
     public List<Cell> cells;
 
@@ -22,9 +22,9 @@ public class ChessBoard {
                 final Cell cell = new Cell(i, j);
                 if (cellPieceMap.containsKey(cell)) {
                     cellPieceMap.get(cell).printPiece();
-                }
+                } else
+                    System.out.print("    ");
                 System.out.print(" || ");
-
             }
             System.out.println("\n");
         }

@@ -14,6 +14,11 @@ public class Cell {
 
     private Integer yPos;
 
+    public Boolean isValidCell(final Integer boardSize) {
+        if (xPos < 0 || yPos < 0 || xPos >= boardSize || yPos >= boardSize)
+            return Boolean.FALSE;
+        return Boolean.TRUE;
+    }
 
 }
 

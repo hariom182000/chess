@@ -16,7 +16,6 @@ public class KingPiece extends Piece {
             cell.setXPos(0);
         } else
             cell.setXPos(7);
-
         cell.setYPos(4);
 
     }

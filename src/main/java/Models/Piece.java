@@ -42,4 +42,5 @@ public class Piece {
         } else
             System.out.print("_W");
     }
+
 }

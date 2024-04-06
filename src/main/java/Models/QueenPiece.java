@@ -16,7 +16,6 @@ public class QueenPiece extends Piece {
             this.cell.setXPos(0);
         } else
             this.cell.setXPos(7);
-
         this.cell.setYPos(3);
     }
 }

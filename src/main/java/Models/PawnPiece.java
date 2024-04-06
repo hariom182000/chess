@@ -13,7 +13,6 @@ public class PawnPiece extends Piece {
         this.pieceType = PieceTypes.PAWN;
         if (colour.equals(Colours.BLACK)) {
             this.cell = new Cell(1, yPos);
-
         } else
             this.cell = new Cell(6, yPos);
     }

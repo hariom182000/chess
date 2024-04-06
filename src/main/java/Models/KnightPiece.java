@@ -14,7 +14,6 @@ public class KnightPiece extends Piece {
         this.cell = new Cell();
         if (colour.equals(Colours.BLACK)) {
             cell.setXPos(0);
-
         } else
             cell.setXPos(7);
         if (yPos == 1 || yPos == 6)
