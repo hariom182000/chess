@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class KnightMoveValidator implements MoveValidatorService {
     @Override
-    public ValidMoveResponse validMove(Map<Cell, Piece> cellPieceMap, Piece piece, Cell cell) {
+    public ValidMoveResponse validMove(final Map<Cell, Piece> cellPieceMap, final Piece piece, final Cell cell) {
         return null;
     }
 }

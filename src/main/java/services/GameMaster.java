@@ -136,15 +136,15 @@ public class GameMaster {
                 System.out.println("invalid co-ordinates");
                 continue;
             }
-            MoveValidatorService moveValidatorService =
+            final MoveValidatorService moveValidatorService =
                     pieceMoveValidatorFactory.getMoveValidatorService(selectedPiece);
-            ValidMoveResponse
+            final ValidMoveResponse
                     moveResponse = moveValidatorService.validMove(chessBoard.getCellPieceMap(), selectedPiece, cell);
-            if (!moveResponse.getIsValidMove()) {
+            if (Boolean.FALSE.equals(moveResponse.getIsValidMove())) {
                 System.out.println("invalid move");
                 continue;
             }
-            if (moveResponse.getIsPieceKilled()) {
+            if (Boolean.TRUE.equals(moveResponse.getIsPieceKilled())) {
                 if (moveResponse.getPieceKilled().getPieceType().equals(PieceTypes.KING)) {
                     System.out.println("game over " + currentPlayersColor + " won the game");
                     break;
@@ -154,7 +154,7 @@ public class GameMaster {
                 } else {
                     playerB.getPieces().remove(moveResponse.getPieceKilled());
                 }
-                chessBoard.getCellPieceMap().remove(moveResponse.getCellReached(), moveResponse.getPieceKilled());
+                chessBoard.getCellPieceMap().remove(moveResponse.getKilledPieceCell(), moveResponse.getPieceKilled());
             }
             chessBoard.getCellPieceMap().remove(selectedPiece.getCell());
             selectedPiece.setCell(moveResponse.getCellReached());

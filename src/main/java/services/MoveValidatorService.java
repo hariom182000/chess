@@ -8,5 +8,5 @@ import java.util.Map;
 
 public interface MoveValidatorService {
 
-    ValidMoveResponse validMove(final Map<Cell, Piece> cellPieceMap, final Piece piece, final Cell cell);
+    ValidMoveResponse validMove(Map<Cell, Piece> cellPieceMap, Piece piece, Cell cell);
 }

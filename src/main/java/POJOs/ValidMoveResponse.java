@@ -13,6 +13,8 @@ public class ValidMoveResponse {
 
     private Piece pieceKilled;
 
+    private Cell killedPieceCell;
+
     private Cell cellReached;
 
 }
